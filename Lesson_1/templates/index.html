@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+
+<body>
+    <header>
+        <container style="text-align: center;">
+            <H1>Main page</H1>
+        </container>
+    </header>
+    <content>
+        <container style="text-align: center;">
+            <h3>Small test table (filling in templator test)</h3>
+            <table style="border: 3px solid black; margin: 0 auto;">
+                <tr>
+                    <th style="border: 1px solid black; padding: 5 px;">Name</th>
+                </tr>
+                <tr>
+                    <th style="border: 1px solid black; padding: 5 px;">Alex</th>
+                </tr>
+                {% for name in object_list %}
+                <tr>
+                    <th style="border: 1px solid black; padding: 5 px;">{{name.name}}</th>
+                </tr>
+                {% endfor%}
+            </table>
+        </container>
+    </content>
+    <footer>
+        <container style="text-align: center;">
+            <h5>Today: {{date}}</h5>
+            <a style="margin: 0 auto; display: block;" href="/about">About page</a>
+        </container>
+    </footer>
+</body>
+
+</html>
