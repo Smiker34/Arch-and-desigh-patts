@@ -1,0 +1,18 @@
+<div class="content">
+    <div class="container">
+        <h3>Small test table (filling in templator test)</h3>
+        <table>
+            <tr>
+                <th>Name</th>
+            </tr>
+            <tr>
+                <th>Alex</th>
+            </tr>
+            {% for name in object_list %}
+            <tr>
+                <th>{{name.name}}</th>
+            </tr>
+            {% endfor%}
+        </table>
+    </div>
+</div>
