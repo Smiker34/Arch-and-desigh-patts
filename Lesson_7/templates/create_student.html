@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}
+Создание студента
+{% endblock %}
+{% block style %}
+{% include "style.html" %}
+{% endblock %}
+{% block header %}
+{% include "header.html" %}
+{% endblock %}
+{% block body %}
+<div>
+    <li>
+        <a href="/student_list/">Список студентов</a>
+    </li>
+</div>
+<div class="container">
+    <h1>Создание студента</h1>
+    <form method="post">
+        <input type="text" name="name" placeholder="Имя">
+        <button type="submit">Сохранить</button>
+    </form>
+</div>
+
+{% endblock %}
