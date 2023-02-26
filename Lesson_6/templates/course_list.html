@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}
+Course list
+{% endblock %}
+{% block style %}
+{% include "style.html" %}
+{% endblock %}
+{% block header %}
+{% include "header.html" %}
+{% endblock %}
+{% block body %}
+<div>
+    <a href="/create_course/?id={{id}}">Создать новый курс</a>
+    <br>
+    <div class="container">
+        <h1>Список курсов для категории "{{name}}"</h1>
+        {% for item in objects_list %}
+        <li>
+            {{item.name}} <span><a href="/copy_course/?name={{item.name}}">скопировать</a></span>
+        </li>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

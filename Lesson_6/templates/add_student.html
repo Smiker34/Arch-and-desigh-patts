@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}
+Добавление на курс
+{% endblock %}
+{% block style %}
+{% include "style.html" %}
+{% endblock %}
+{% block header %}
+{% include "header.html" %}
+{% endblock %}
+{% block body %}
+<div>
+    <li>
+        <a href="/student_list/">Список студентов</a>
+    </li>
+    <li>
+        <a href="/create_student/">Создать студента</a>
+    </li>
+</div>
+<div class="container">
+    <h1>Добавление студента на курс</h1>
+    <form method="post">
+        <h3>Курсы</h3>
+        <select size="3" name="course_name">
+            {% for item in courses %}
+            <option value="{{item.name}}">{{item.name}}</option>
+            {% endfor %}
+        </select>
+        <h3>Студенты</h3>
+        <select size="3" name="student_name">
+            {% for item in students %}
+            <option value="{{item.name}}">{{item.name}}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Записать</button>
+    </form>
+</div>
+{% endblock %}
