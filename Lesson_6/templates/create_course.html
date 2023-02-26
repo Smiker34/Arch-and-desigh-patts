@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}
+Course create
+{% endblock %}
+{% block style %}
+{% include "style.html" %}
+{% endblock %}
+{% block header %}
+{% include "header.html" %}
+{% endblock %}
+{% block body %}
+<div class="container">
+    <div>
+        <h1>Создание курса для категории "{{name}}"</h1>
+        <form method="post">
+            <input type="text" name="name" placeholder="Название">
+            <button type="submit">Сохранить и вернуться к списку курсов</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,33 @@
+<div class="container">
+    <h1>Программы обучения</h1>
+    <p>Курсы в течение года.</p>
+    <p>Расписание действует на: {{date}} <b>(дата подставляется шаблоном)</b></p>
+    <table>
+        <tr>
+            <th class="categories">
+                <a href="/category_list/">Категории</a>
+            </th>
+            <th>Курсы</th>
+        </tr>
+        {% for category in objects_list %}
+        <tr>
+            <th class="category_name">{{category.name}}</th>
+            <th>
+                {% for course in category.courses %}
+                <li>{{course.name}}</li>
+                {% endfor%}
+            </th>
+        </tr>
+        {% endfor%}
+    </table>
+    <form class="courses_form" action="" method="post">
+        <fieldset>
+            <legend>Зарегистрируйтесь</legend>
+            <p><label class="title" for="name">Ваше имя:</label>
+                <input type="text" name="name" id="name"><br />
+                <label class="title" for="email">Ваш email:</label>
+                <input type="text" name="email" id="email">
+            </p>
+            <div class="submit"><input type="submit" value="Регистрация" /></div>
+    </form>
+</div>
